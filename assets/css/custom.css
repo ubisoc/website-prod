@@ -12,10 +12,6 @@
   z-index: 1;
 }
 
-.items li:first-child {
-
-}
-
-.items li:last-child {
-
+#intro > p {
+  color: #898989;
 }

@@ -2000,27 +2000,33 @@
 	#header-wrapper {
 		position: relative;
 		padding: 4em 0 2em 0;
-		background-image: url("images/header.svg");
+		/*background-image: url("images/header.svg");
 		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg, #c7979f 15%, #bb8b77 55%);
 		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg, #c7979f 15%, #bb8b77 55%);
 		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg, #c7979f 15%, #bb8b77 55%);
-		background-image: url(images/overlay.png), url(images/header.svg), linear-gradient(75deg, #c7979f 15%, #bb8b77 55%);
-		background-color: #c7979f;
-		background-size: 100% 620%;
+		background-image: url(images/overlay.png), url(images/header.svg), linear-gradient(75deg, #c7979f 15%, #bb8b77 55%);*/
+		background: #ae826e;
+		background: -moz-linear-gradient(-45deg, #ae826e 1%, #530302 100%);
+		background: -webkit-linear-gradient(-45deg, #ae826e 1%,#530302 100%);
+		background: linear-gradient(135deg, #ae826e 1%,#530302 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae826e', endColorstr='#530302',GradientType=1 );
+		/*background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
-		background-repeat: repeat, no-repeat, no-repeat;
+		background-repeat: repeat, no-repeat, no-repeat;*/
 	}
 
 	.homepage #header-wrapper {
 		padding: 10em 0 6em 0;
-		background-size: 128px 128px, 100% 100%, auto;
+		/*background-size: 128px 128px, 100% 100%, auto;*/
 	}
 
 	#promo-wrapper {
 		position: relative;
-		background-image: url("images/overlay.png"), url("../../images/promo.jpg");
-		background-size: 192px 192px, cover;
-		background-position: top left, center center;
+		background: #a73737;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #7a2828, #a73737);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #7a2828, #a73737); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 		color: #fff;
 		text-align: center;
 		padding: 6em 0 6em 0;
@@ -2031,8 +2037,9 @@
 		position: relative;
 		border-top: solid 1px #c2c7cc;
 		padding: 6em 0 6em 0;
-		background-image: url("images/overlay.png"), url("images/footer.svg");
-		background-size: 128px 128px,				100% 100%;
+		background: #ECE9E6;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	}
 
 /* Header */
