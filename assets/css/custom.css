@@ -1,3 +1,8 @@
+/* General */
+.text-center {
+  text-align: center;
+}
+
 .items {
   display: block;
 }
@@ -14,4 +19,64 @@
 
 #intro > p {
   color: #898989;
+}
+
+article {
+  text-align: justify;
+}
+
+/* Card */
+.cards .card {
+  margin-right: 10px;
+}
+
+.cards .card:last-child {
+  margin: 0;
+}
+
+.inner-cards {
+  width: 100%;
+}
+
+.card {
+  border-radius: 0 0 7px 7px;
+  box-shadow: 0 1px 2px #898989;
+  padding: 0;
+  width: 30%;
+}
+
+.card-image a {
+  text-decoration: none;
+  border: none;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-header {
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.card-header h3 {
+  font-weight: 900;
+}
+
+.card-header p {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.card-content {
+  text-align: justify;
+  padding: 10px 15px;
+}
+
+/* Google Maps */
+#map {
+  height: 600px;
+  width: 100%;
+  margin-bottom: 40px;
 }
