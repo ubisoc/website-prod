@@ -3,6 +3,25 @@
   text-align: center;
 }
 
+.cite {
+  text-align: right;
+}
+
+.block {
+  background-color: #f8f8f8;
+  padding: 20px 30px;
+  margin: 10px 0 30px 0;
+  box-shadow: 0px 1px 2px #bababa;
+}
+
+iframe.yt-video {
+  display: block;
+  width: 100%;
+  height: 680px;
+  margin: 35px auto;
+}
+
+/* */
 .items {
   display: block;
 }
