@@ -92,30 +92,23 @@
 				<div class="wrapper">
 	<div class="container" id="main">
 		<article id="content">
-      <header>
-        <h2 class="text-center">Local mosques</h2>
-      </header>
-      <div id="map"></div>
-      <h3>University of Birmingham Chaplaincy (St Francis Hall) - University of Birmingham, B15 2TT</h3>
-      <p>
-        Not exactly a mosque but it is a multi-faith centre which religious societies at the University of Birmingham use.
-        Located right behind the Guild of Students, it is the venue which the Islamic Society use to host Jumuah (Friday Prayers) every single Friday of the year.
-      </p>
+			<header>
+				<h2>Halal places to eat on &amp; around campus</h2>
+			</header>
 
-      <h3>Jalalabad Mosque - 24 Dartmouth Road, B29 6DR</h3>
-      <p>
-        A local mosque located in Selly Oak. The only mosque within a 30 minute walk of campus.
-        Congregational prayer for every prayer is held in this mosque every single day of the year.
-        They hold Friday and Eid Day Prayers.
-      </p>
+      <div class="block">
+        <h3>On campus</h3>
+        <p>
+          According to the University, all chicken served in all University owned restaurants is halal.
+          You can find halal sandwiches in both Spar outlets (in the Guild of Students building and in University Centre).
+          Subway in the Guild of Students Building is not halal.
+        </p>
+      </div>
 
-      <h3>Muslim Student House Mosque - 517 Moseley Rd, B12 9BX</h3>
-      <p>
-        The closest mosque after Jalalabad and is located in Moseley. 45 minute walk from campus. Quite a large mosque with regular events and activities.
-        FOSIS (Federation of Student Islamic Societies), MAB Youth (Muslim Association of Britain) and the University of Birmingham Islamic Society all
-        work in partnership with Muslim Student House and share facilities. Congregational prayer for every prayer is held in this mosque every single day of the year.
-        They hold Friday and Eid Day Prayers.
-      </p>
+      <div class="block">
+        <h3>Around campus</h3>
+        <div id="map"></div>
+      </div>
 		</article>
 	</div>
 </div>
@@ -168,102 +161,216 @@
 <[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]
 <script src="assets/js/main.js"></script>-->
 
+
 <script>
-  function initMap() {
-    var center = {lat: 52.451896, lng: -1.910822};
-    var chaplaincy = {lat: 52.449417, lng: -1.926418};
-    var jalalabad = {lat: 52.442649, lng: -1.934597};
-    var muslimStudentHouse = {lat: 52.457380, lng: -1.885944};
+function initMap() {
+  // =========================== Create map
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: {
+      lat: 52.445637,
+      lng: -1.933569
+    }
+  });
 
-    // =========================== Windows
-    var chaplaincyStr =
+  // =========================== Locations
+  var places = [];
+
+  // Pepe's
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.445070,
+        lng: -1.934376
+      },
+      map: map
+    }),
+
+    window: new google.maps.InfoWindow({
+      content:
       '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">University of Birmingham Chaplaincy (St Francis Hall)</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Pepe\'s</h1>'+
       '<div id="bodyContent">'+
-      '<p>Not exactly a mosque but it is a multi-faith centre which religious societies at the University of Birmingham use.' +
-      'Located right behind the Guild of Students, it is the venue which the Islamic Society use to host Jumuah (Friday Prayers) every single Friday of the year.</p>'+
+      '<img src="http://s3.amazonaws.com/ldc/large/2297/22979225.jpg">' +
       '</div>'+
-      '</div>';
+      '</div>'
+    })
+  });
 
-    var chaplaincyWindow = new google.maps.InfoWindow({
-      content: chaplaincyStr
-    });
+  // Dixy Chicken
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.446270,
+        lng: -1.932501
+      },
+      map: map
+    }),
 
-    var jalalabadStr =
+    window: new google.maps.InfoWindow({
+      content:
       '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Jalalabad Mosque</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">Dixy Chicken</h1>'+
       '<div id="bodyContent">'+
-      '<p>A local mosque located in Selly Oak. The only mosque within a 30 minute walk of campus.' +
-      'Congregational prayer for every prayer is held in this mosque every single day of the year.' +
-      'They hold Friday and Eid Day Prayers.' +
-      '</p>'+
+      '<img src="https://i.ebayimg.com/00/s/NTc1WDEwMjQ=/z/4zEAAOSwal5YLGZs/$_86.JPG">' +
       '</div>'+
-      '</div>';
+      '</div>'
+    })
+  });
 
-    var jalalabadWindow = new google.maps.InfoWindow({
-      content: jalalabadStr
-    });
-
-    var muslimStudentHouseStr =
-    '<div id="content">'+
-    '<div id="siteNotice">'+
-    '</div>'+
-    '<h1 id="firstHeading" class="firstHeading">Muslim Student House Mosque</h1>'+
-    '<div id="bodyContent">'+
-    '<p>The closest mosque after Jalalabad and is located in Moseley. 45 minute walk from campus. Quite a large mosque with regular events and activities.' +
-    'FOSIS (Federation of Student Islamic Societies), MAB Youth (Muslim Association of Britain) and the University of Birmingham Islamic Society all' +
-    'work in partnership with Muslim Student House and share facilities. Congregational prayer for every prayer is held in this mosque every single day of the year.' +
-    'They hold Friday and Eid Day Prayers.' +
-    '</p>'+
-    '</div>'+
-    '</div>';
-
-    var muslimStudentHouseWindow = new google.maps.InfoWindow({
-      content: muslimStudentHouseStr
-    });
-
-    // =========================== Create map
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: center
-    });
-
-    // =========================== Chaplaincy
-    var chaplaincyMarker = new google.maps.Marker({
-      position: chaplaincy,
+  // Chicken.com
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.445637,
+        lng: -1.933569
+      },
       map: map
-    });
-    chaplaincyMarker.addListener('click', function() {
-      chaplaincyWindow.open(map, chaplaincyMarker);
-    });
+    }),
 
-    // =========================== Jalalabad
-    var jalalabadMarker = new google.maps.Marker({
-      position: jalalabad,
-      map: map
-    });
-    jalalabadMarker.addListener('click', function() {
-      jalalabadWindow.open(map, jalalabadMarker);
-    });
+    window: new google.maps.InfoWindow({
+      content:
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Chicken.com</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="https://i.ebayimg.com/00/s/NTc1WDEwMjQ=/z/4zEAAOSwal5YLGZs/$_86.JPG">' +
+      '</div>'+
+      '</div>'
+    })
+  });
 
-    // =========================== Muslim Student House
-    var muslimStudentHouseMarker = new google.maps.Marker({
-      position: muslimStudentHouse,
+  // Pizza Land
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.445108,
+        lng: -1.934392
+      },
       map: map
+    }),
+
+    window: new google.maps.InfoWindow({
+      content:
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Pizza Land</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="https://s3-media1.fl.yelpcdn.com/bphoto/rBHSsHUx2VNQ62Tm9AZOgQ/348s.jpg">' +
+      '</div>'+
+      '</div>'
+    })
+  });
+
+  // Luciano's
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.444700,
+        lng: -1.934926
+      },
+      map: map
+    }),
+
+    window: new google.maps.InfoWindow({
+      content:
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Luciano\'s</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="https://b.zmtcdn.com/data/pictures/0/6900030/a012c443a9d7ed4b05233789d0804db4.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A">' +
+      '</div>'+
+      '</div>'
+    })
+  });
+
+  // Turkish Kitchen
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.446541,
+        lng: -1.931615
+      },
+      map: map
+    }),
+
+    window: new google.maps.InfoWindow({
+      content:
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Turkish Kitchen</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/c7/82/a5/turkish-kitchen.jpg">' +
+      '</div>'+
+      '</div>'
+    })
+  });
+
+  // Yakinori
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.446151,
+        lng: -1.932060
+      },
+      map: map
+    }),
+
+    window: new google.maps.InfoWindow({
+      content:
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Yakinori</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="https://thehungrypair.files.wordpress.com/2015/06/image1-91.jpeg?w=748&h=561">' +
+      '</div>'+
+      '</div>'
+    })
+  });
+
+  // Wanted Burgers
+  places.push({
+    marker: new google.maps.Marker({
+      position: {
+        lat: 52.444356,
+        lng: -1.935553
+      },
+      map: map
+    }),
+
+    window: new google.maps.InfoWindow({
+      content:
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Wanted Burgers</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="http://wantedburgers.com/media/logo.png">' +
+      '</div>'+
+      '</div>'
+    })
+  });
+
+  places.forEach(function (place) {
+    place.marker.addListener('click', function() {
+      place.window.open(map, place.marker);
     });
-    muslimStudentHouseMarker.addListener('click', function() {
-      muslimStudentHouseWindow.open(map, muslimStudentHouseMarker);
-    });
-  }
+  });
+}
+
 </script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-WxzbnwrSbcxcKWmR3gueYdGmdjXcvYI&callback=initMap">
 </script>
-
 
 
 	</body>
