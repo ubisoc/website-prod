@@ -1,6 +1,15 @@
+ol {
+  list-style: decimal;
+  padding-left: 30px;
+}
+
 /* General */
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .cite {
