@@ -67,7 +67,7 @@ article {
 
 /* Grid */
 .grid {
-  margin: 30px auto; 
+  margin: 30px auto;
 }
 
 .grid-item img {
@@ -75,6 +75,10 @@ article {
 }
 
 /* Card */
+.cards {
+  display: inline-block;
+}
+
 .cards .card {
   margin-right: 10px;
 }
@@ -83,15 +87,12 @@ article {
   margin: 0;
 }
 
-.inner-cards {
-  width: 100%;
-}
-
 .card {
+  margin-bottom: 30px;
   border-radius: 0 0 7px 7px;
   box-shadow: 0 1px 2px #898989;
   padding: 0;
-  width: 30%;
+  width: 100%;
 }
 
 .card-image a {
@@ -121,6 +122,36 @@ article {
 .card-content {
   text-align: justify;
   padding: 10px 15px;
+}
+
+.card-actions {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.card-actions .button {
+  display: block;
+}
+
+.card-actions ul {
+  padding-left: 30px;
+}
+
+.card-actions ul li {
+  list-style: circle;
+  text-align: left;
+}
+
+@media (min-width: 825px) {
+  .cards {
+    text-align: center;
+  }
+
+  .card {
+    float: left;
+    width: 30%;
+  }
 }
 
 /* Google Maps */
