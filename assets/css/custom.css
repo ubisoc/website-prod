@@ -65,6 +65,15 @@ article {
   text-align: justify;
 }
 
+/* Grid */
+.grid {
+  margin: 30px auto; 
+}
+
+.grid-item img {
+  width: 400px;
+}
+
 /* Card */
 .cards .card {
   margin-right: 10px;

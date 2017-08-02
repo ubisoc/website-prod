@@ -1,10 +1,4 @@
-/*
-	Telephasic by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
+;(function($) {
 
 	skel.breakpoints({
 		normal: '(max-width: 1280px)',
@@ -83,6 +77,14 @@
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#navButton, #navPanel, #page-wrapper')
 						.css('transition', 'none');
+
+			// Carousel
+			$('.grid').slick({
+				slidesToShow: 3,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 2000,
+		  });
 
 	});
 
