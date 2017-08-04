@@ -1984,19 +1984,6 @@
 			z-index: 2;
 		}
 
-		.image-wrapper.first:before {
-			content: '';
-			display: block;
-			width: 2000%;
-			height: 100%;
-			position: absolute;
-			left: -1000%;
-			top: 0;
-			z-index: 1;
-			box-shadow: inset 0px 0px 0px 1px #e8e8e8;
-			background: #f6f8fb url("images/image-wrapper.svg");
-		}
-
 	#header-wrapper {
 		position: relative;
 		padding: 4em 0 2em 0;
