@@ -20,6 +20,7 @@
 <!--[if lte IE 9]><link href="../assets/css/ie9.css" rel="stylesheet" /><![endif]-->
 <link href="../assets/css/custom.css" rel="stylesheet" />
 
+    <link href="../assets/css/photoswipe/photoswipe.css" rel="stylesheet" /><link href="../assets/css/photoswipe/default-skin/default-skin.css" rel="stylesheet" />
 
 	</head>
 	<body class="no-sidebar">
@@ -86,48 +87,126 @@
 
 				<!-- Content -->
 				<div class="wrapper">
-	<div class="container" id="main">
-		<article id="content">
-			<header>
-				<h2>Freshers Week</h2>
-				<p>
-          Freshers Week is essentially Welcome Week at the University of Birmingham
-          for new students. Students are introduced to the University with induction
-          lectures and all Student Societies run a variety of events during Freshers Week
-          to enable the new students to meet like minded people and make new friends.
-				</p>
-			</header>
+    <div class="container" id="main">
+        <article id="content">
+            <header>
+                <h2>Freshers Week</h2>
+                <p>
+                    Freshers Week is essentially Welcome Week at the University of Birmingham for new students. Students are introduced to the University with induction lectures and all Student Societies run a variety of events during Freshers Week to enable the new students
+                    to meet like minded people and make new friends.
+                </p>
+            </header>
 
-      <p>
-        The Islamic Society organises an incredible itinerary of Freshers Week events every single year and this year is no different! We have a great list of events which you can see on the poster below.
-        It’s a great opportunity to build new friendships and enjoy yourself in the fund and welcoming atmosphere the Islamic Society provides.
-      </p>
+            <p>
+                The Islamic Society organises an incredible itinerary of Freshers Week events every single year and this year is no different! We have a great list of events which you can see on the poster below. It’s a great opportunity to build new friendships and
+                enjoy yourself in the fund and welcoming atmosphere the Islamic Society provides.
+            </p>
 
-      <p>[Freshers Week 2017 Poster]</p>
+            <div class="gallery-preview">
+                <img src="../images/fw-16-17/p1.jpg" />
+                <div class="gp-content">
+                    <h1><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</h1>
+                    <p>
+						A week to meet like minded people and make new friends
+						through various events.
+                    </p>
+                </div>
+                <div class="gp-overlay">
+                    <div class="gp-button">
+                        <i class="fa fa-search" data-gallery="gallery" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
 
-      <p>
-        We finish off Freshers Week with our annual Freshers Dinner where we serve a 3 course
-        meal and host entertainment at a hall in Birmingham to allow new students to socialise
-        and have fun with their newly found friends.
-        You can view the event page using the following link: [Freshers Dinner Facebook event page link]
-      </p>
+            <p>
+                We finish off Freshers Week with our annual Freshers Dinner where we serve a 3 course meal and host entertainment at a hall in Birmingham to allow new students to socialise and have fun with their newly found friends. You can view the event page using
+                the following link: [Freshers Dinner Facebook event page link]
+            </p>
 
-      <p>[Freshers Dinner Poster]</p>
+            <div class="block">
+                <h3>If you have any questions about Freshers Week 2017 please email</h3>
+                <ul>
+                    <li>Anas Abu (<a href="mailto:vicebrother@ubisoc.co.uk">vicebrother@ubisoc.co.uk</a>)</li>
+                    <li>Salma Abdallah (<a href="vicesister@ubsico.co.uk">vicesister@ubsico.co.uk</a>)</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>
 
-      <div class="block">
-        <h3>If you have any questions about Freshers Week 2017 please email</h3>
-        <ul>
-          <li>Anas Abu (<a href="mailto:vicebrother@ubisoc.co.uk">vicebrother@ubisoc.co.uk</a>)</li>
-          <li>Salma Abdallah (<a href="vicesister@ubsico.co.uk">vicesister@ubsico.co.uk</a>)</li>
-        </ul>
-      </div>
+<!-- GALLERY -->
+<div id="gallery">
+		<img src="../images/fw-16-17/p1.jpg" data-size="2048x1365" />
+		<img src="../images/fw-16-17/p2.jpg" data-size="2048x1365" />
+		<img src="../images/fw-16-17/p3.jpg" data-size="2048x1365" />
+		<img src="../images/fw-16-17/p4.jpg" data-size="2048x1365" />
+		<img src="../images/fw-16-17/p5.jpg" data-size="2048x1365" />
+		<img src="../images/fw-16-17/p6.jpg" data-size="2048x1365" />
+		<img src="../images/fw-16-17/p7.jpg" data-size="2048x1365" />
+</div>
 
-      <div class="block">
-        <h3>Previous Freshers Week gallery</h3>
-        <p>[Gallery]</p>
-      </div>
-		</article>
-	</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -169,6 +248,7 @@
 <script src="../assets/js/skel.min.js"></script>
 <script src="../assets/js/util.js"></script>
 <!--[if lte IE 8]><<script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="../assets/js/photoswipe/photoswipe.min.js"></script><script src="../assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
 <script src="../assets/js/main.js"></script>
 
 

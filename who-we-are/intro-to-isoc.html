@@ -20,7 +20,7 @@
 <!--[if lte IE 9]><link href="../assets/css/ie9.css" rel="stylesheet" /><![endif]-->
 <link href="../assets/css/custom.css" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" rel="stylesheet" /><link href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" rel="stylesheet" />
+    <link href="../assets/css/photoswipe/photoswipe.css" rel="stylesheet" /><link href="../assets/css/photoswipe/default-skin/default-skin.css" rel="stylesheet" />
 
 	</head>
 	<body class="no-sidebar">
@@ -87,57 +87,115 @@
 
 				<!-- Content -->
 				<div class="wrapper">
-	<div class="container" id="main">
-		<article id="content">
-			<header>
-				<h2>Assalamu alaykum! Welcome to the University of Birmingham Islamic Society!</h2>
-				<p>
-					The Islamic Society at the University of Birmingham is a vibrant, fast growing society which serves and represents Muslim students at the University of Birmingham.
-				</p>
-			</header>
-			<p>
-				We organise <strong>Jumuah (Friday prayers)</strong>, <strong>campaigns</strong> (like our very successful annual Discover Islam Week) and <strong>over 100 different events</strong> over the course of the year!
-				We have socials, Islamic talks, career development workshops and many more.
-				We try and provide Muslims with an alternative to the regular University lifestyle by creating a fun, warm and welcoming atmosphere at all our events.
-				We believe that belonging to a <strong>welcoming and active community</strong> is a vital aspect in enjoying University so we have done our utmost to make sure that you can come and join such a community.
-			</p>
-			<p>
-				You can browse our website for more information regarding the <a href="intro-to-committee.html">Islamic Society Committee</a>, prayer spaces, halal food and much more.
-				If you have any questions you can get in touch via our social media sites (links below).
-				We hope you have an amazing time at the University of Birmingham and would love to see you at one of our events or activities!
-			</p>
+    <div class="container" id="main">
+        <article id="content">
+            <header>
+                <h2>Assalamu alaykum! Welcome to the University of Birmingham Islamic Society!</h2>
+                <p>
+                    The Islamic Society at the University of Birmingham is a vibrant, fast growing society which serves and represents Muslim students at the University of Birmingham.
+                </p>
+            </header>
+            <p>
+                We organise <strong>Jumuah (Friday prayers)</strong>, <strong>campaigns</strong> (like our very successful annual Discover Islam Week) and <strong>over 100 different events</strong> over the course of the year! We have socials, Islamic
+                talks, career development workshops and many more. We try and provide Muslims with an alternative to the regular University lifestyle by creating a fun, warm and welcoming atmosphere at all our events. We believe that belonging to a <strong>welcoming and active community</strong>                is a vital aspect in enjoying University so we have done our utmost to make sure that you can come and join such a community.
+            </p>
+            <p>
+                You can browse our website for more information regarding the
+                <a href="intro-to-committee.html">Islamic Society Committee</a>, prayer spaces, halal food and much more. If you have any questions you can get in touch via our social media sites (links below). We hope you have an amazing time at the University of Birmingham and would love to see you at one of our
+                    events or activities!
+            </p>
 
-			<div class="grid">
-				<div class="grid-item">
-					<img src="../images/awards/most-outstanding-society-award.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/bro-residential/p1.jpg" />
-				</div>
-			  <div class="grid-item">
-					<img src="../images/awards/volunteer-award.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/awards/leadership-excellence-award.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/bro-residential/p2.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/diw-16-17/p1.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/diw-16-17/p2.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/diw-16-17/p3.jpg" />
-				</div>
-				<div class="grid-item">
-					<img src="../images/diw-16-17/p4.jpg" />
-				</div>
-			</div>
-		</article>
-	</div>
+            <div class="gallery-preview">
+                <img src="../images/awards/most-outstanding-society-award.jpg" />
+                <div class="gp-content">
+                    <h1><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</h1>
+                    <p>Get a glimpse of the ISOC activities and achievements!</p>
+                </div>
+                <div class="gp-overlay">
+                    <div class="gp-button">
+                        <i class="fa fa-search" data-gallery="gallery" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery">
+    <img src="../images/awards/most-outstanding-society-award.jpg" data-size="1536x2048" />
+    <img src="../images/bro-residential/p1.jpg" data-size="1328x747" />
+    <img src="../images/awards/volunteer-award.jpg" data-size="1536x2048" />
+    <img src="../images/awards/leadership-excellence-award.jpg" data-size="1152x2048" />
+    <img src="../images/bro-residential/p2.jpg" data-size="1600x1200" />
+    <img src="../images/diw-16-17/p1.jpg" data-size="2048x1365" />
+    <img src="../images/diw-16-17/p2.jpg" data-size="1365x2048" />
+    <img src="../images/diw-16-17/p3.jpg" data-size="2048x1365" />
+    <img src="../images/diw-16-17/p4.jpg" data-size="2048x1365" />
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -179,7 +237,7 @@
 <script src="../assets/js/skel.min.js"></script>
 <script src="../assets/js/util.js"></script>
 <!--[if lte IE 8]><<script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="../assets/js/photoswipe/photoswipe.min.js"></script><script src="../assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
 <script src="../assets/js/main.js"></script>
 
 

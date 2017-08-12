@@ -78,16 +78,43 @@
 					$('#navButton, #navPanel, #page-wrapper')
 						.css('transition', 'none');
 
-			// Carousel
-			if ($('div').slick) {
-				$('.grid').slick({
-					slidesToShow: 3,
-				  slidesToScroll: 1,
-				  autoplay: true,
-				  autoplaySpeed: 2000,
-			  });
-			}
+			// Gallery
+			$('[data-gallery]').on('click', function () {
+				var galleryName = $(this).data('gallery');
+				var items = [];
 
+				$('#' + galleryName).children().each(function () {
+					var size = $(this).data('size').split('x');
+
+					items.push({
+						src: $(this).attr('src'),
+						w: size[0],
+						h: size[1]
+					});
+				});
+
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var options = {
+					history: false,
+					focus: false,
+					showAnimationDuration: 0,
+					hideAnimationDuration: 0
+				};
+
+				var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
+			});
+
+			// Carousel
+			if ($('.slider').slick) {
+				$('.slider').slick({
+					dots: true,
+					slidesToShow: 1,
+					infinite: true,
+					centerMode: true,
+					variableWidth: true
+				});
+			}
 	});
 
 })(jQuery);
