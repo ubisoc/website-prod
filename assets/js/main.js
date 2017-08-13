@@ -112,7 +112,8 @@
 					slidesToShow: 1,
 					infinite: true,
 					centerMode: true,
-					variableWidth: true
+					variableWidth: true,
+					adaptiveHeight: true
 				});
 			}
 	});

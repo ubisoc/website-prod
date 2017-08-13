@@ -53,8 +53,13 @@ ol {
   font-weight: bold;
 }
 
+.block .gallery {
+    margin: 30px auto;
+}
+
 .block .gallery img {
   display: inline-block;
+  vertical-align: top;
 }
 
 .block .gallery-2 img {
@@ -98,6 +103,10 @@ article {
 }
 
 /* Slider */
+.slider {
+    margin: 35px 0;
+}
+
 .slider-item img {
     width: 450px;
 }
