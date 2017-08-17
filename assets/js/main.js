@@ -116,6 +116,22 @@
 					adaptiveHeight: true
 				});
 			}
+
+			// Accordion
+			$('.tab > label').on('click', function () {
+				var status = $(this).data('status');
+				status = !status ? 'off' : status;
+
+				if (status === 'off') {
+					$(this).siblings('.tab-content').show();
+					$(this).data('status', 'on');
+				} else if (status === 'on') {
+					$(this).siblings('.tab-content').hide();
+					$(this).data('status', 'off');
+				}
+
+
+			});
 	});
 
 })(jQuery);

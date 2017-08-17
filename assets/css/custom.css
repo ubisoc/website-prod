@@ -3,6 +3,32 @@ ol {
   padding-left: 30px;
 }
 
+hr {
+    border-top: none;
+    margin: 3px;
+}
+
+th {
+    font-weight: bold;
+    text-align: center;
+}
+
+thead tr th:first-child {
+    text-align: left;
+}
+
+tbody tr {
+    border-top: 1px solid #dadada;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody tr td:first-child {
+    text-align: left;
+}
+
 /* Overrides */
 #content header .fa {
     margin-right: 10px;
@@ -35,6 +61,73 @@ ol {
 
 .info {
     font-size: 1.6em;
+}
+
+/* Accordion */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #6f1d07;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+label .name {
+    font-size: 1.2em;
+}
+label .position {
+    font-weight: 100;
+}
+.tab-content {
+    display: none;
+  background: rgba(111, 29, 7, 0.84);
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+  text-align: justify;
+  padding: 10px 0;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
 }
 
 /* Block */
@@ -200,7 +293,7 @@ article {
 }
 
 .cards .card:last-child {
-  margin: 0;
+  margin-right: 0;
 }
 
 .card {
@@ -241,9 +334,12 @@ article {
 }
 
 .card-actions {
-  margin-bottom: 30px;
   text-align: center;
   padding: 20px 15px;
+}
+
+.card-actions ul {
+    margin-bottom: 0;
 }
 
 .card-actions .button {
@@ -267,7 +363,7 @@ article {
   .card {
       display: inline-block;
       vertical-align: top;
-      width: 30%;
+      width: 40%;
   }
 }
 
