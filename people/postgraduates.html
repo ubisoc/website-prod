@@ -20,7 +20,7 @@
 <!--[if lte IE 9]><link href="../assets/css/ie9.css" rel="stylesheet" /><![endif]-->
 <link href="../assets/css/custom.css" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" rel="stylesheet" /><link href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" rel="stylesheet" />
+    <link href="../assets/css/photoswipe/photoswipe.css" rel="stylesheet" /><link href="../assets/css/photoswipe/default-skin/default-skin.css" rel="stylesheet" />
 
 	</head>
 	<body class="no-sidebar">
@@ -99,7 +99,7 @@
 
             <p>
                 We are looking to run even more events this year for Post Graduate including our very exciting Post Graduate Freshers Week events! Look out for them in the near future. If you have any ideas or questions, please contact our Post Graduate Officer:
-                <strong>Sohail Hussain (<a href="mailto:sohail.hussain@ubisoc.co.uk">sohail.hussain@ubisoc.co.uk</a>)</strong>.
+                <strong>Sohail Hussain (<a href="mailto:post.grad@ubisoc.co.uk">post.grad@ubisoc.co.uk</a>)</strong>.
             </p>
 
             <blockquote>
@@ -124,38 +124,17 @@
                     Umer Karim (Pakistan) on the PG Dinner, PhD in Political Science
                 </p>
 
-				<div class="slider">
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p1.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p2.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p3.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p4.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p5.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p6.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p7.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p8.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p9.jpg" />
-					</div>
-					<div class="slider-item">
-						<img src="../images/postgrad/dinner-16-17/p10.jpg" />
-					</div>
-				</div>
+                <div class="gallery-preview">
+                    <img src="../images/postgrad/dinner-16-17/p1.jpg" />
+                    <div class="gp-content">
+                        <h1><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</h1>
+                    </div>
+                    <div class="gp-overlay">
+                        <div class="gp-button">
+                            <i class="fa fa-search" data-gallery="gallery" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="block">
@@ -207,6 +186,84 @@
     </div>
 </div>
 
+<!-- GALLERY -->
+<div id="gallery">
+    <img src="../images/postgrad/dinner-16-17/p1.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p2.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p3.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p4.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p5.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p6.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p7.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p8.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p9.jpg" data-size="960x640" />
+    <img src="../images/postgrad/dinner-16-17/p10.jpg" data-size="960x640" />
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 				<div id="footer-wrapper">
 	<div id="footer" class="container">
@@ -246,7 +303,7 @@
 <script src="../assets/js/skel.min.js"></script>
 <script src="../assets/js/util.js"></script>
 <!--[if lte IE 8]><<script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="../assets/js/photoswipe/photoswipe.min.js"></script><script src="../assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
 <script src="../assets/js/main.js"></script>
 
 

@@ -98,7 +98,8 @@
 					history: false,
 					focus: false,
 					showAnimationDuration: 0,
-					hideAnimationDuration: 0
+					hideAnimationDuration: 0,
+					closeOnScroll: false
 				};
 
 				var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);

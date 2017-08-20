@@ -71,12 +71,12 @@ tbody tr td:first-child {
   color: #fff;
   overflow: hidden;
 }
-input {
+.tab input {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
-label {
+.tab label {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
@@ -85,10 +85,10 @@ label {
   line-height: 3;
   cursor: pointer;
 }
-label .name {
+.tab label .name {
     font-size: 1.2em;
 }
-label .position {
+.tab label .position {
     font-weight: 100;
 }
 .tab-content {
@@ -104,7 +104,7 @@ label .position {
   margin: 1em;
 }
 /* Icon */
-label::after {
+.tab label::after {
   position: absolute;
   right: 0;
   top: 0;
@@ -144,19 +144,6 @@ input[type=radio]:checked + label::after {
 
 .block h4 {
   font-weight: bold;
-}
-
-.block .gallery {
-    margin: 30px auto;
-}
-
-.block .gallery img {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.block .gallery-2 img {
-  width: 48%;
 }
 
 .block-hero {
@@ -279,7 +266,7 @@ article {
 }
 
 /* Gallery */
-#gallery {
+#gallery, .gallery {
   display: none;
 }
 
