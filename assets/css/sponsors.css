@@ -1,0 +1,7 @@
+#main .block {
+    text-align: center;
+}
+
+#main .block * {
+    text-align: justify;
+}
